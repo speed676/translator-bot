@@ -1,0 +1,14 @@
+{
+  "name": "translate-bot",
+  "version": "1.0.0",
+  "description": "Librería para la traducción de JSON a la implementación de cada plataforma.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "translate"
+  ],
+  "author": "Victor Guillem Agustí",
+  "license": "ISC"
+}
