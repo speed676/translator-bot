@@ -1,13 +1,16 @@
 import {Bot} from "../interface/Bot";
 
-class KikBot implements Bot {
+class KikBot //implements Bot 
+{
 	
+	myjson:any;
+
 	constructor(argument) {
-		// code...
+		this.myjson = {"hola": "mundo"};
 	}
 
-	translateToSystem(target){
-		// TODO
+	translateToSystem(target: any): JSON{
+		return this.myjson;	
 	}
 
 	translateToBot(target){
