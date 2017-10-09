@@ -25,26 +25,26 @@ describe('TEST', function() {
             "text": "hola mundo"
         };
 
-      let jsonGenerico = { 
-          "idReceptor": "001", 
-          "idCanal": "001", 
-          "mensaje": { 
-            "texto": "hola mundo", 
-            "tipo": "text"
-          }
+        let jsonGenerico = { 
+            "idReceptor": "001", 
+            "idCanal": "001", 
+            "mensaje": { 
+              "texto": "hola mundo", 
+              "tipo": "text"
+            }
         };
 
-      let traducidoASystem =skype.translateToSystem(jsonSkype);
+        let traducidoASystem = skype.translateToSystem(jsonSkype);
 
-      let traducidoABot = skype.translateToBot(jsonGenerico);
+        let traducidoABot = skype.translateToBot(jsonGenerico);
 
-       it('Traducir a lenguage de Skype:', function(){
-         assert.deepEqual(jsonGenerico, traducidoASystem);
-       });
+        it('Traducir a lenguage de Skype:', function(){
+            assert.deepEqual(jsonGenerico, traducidoASystem);
+        });
 
-       it('Traducir de Skype a lenguaje generico:', function(){
-         assert.deepEqual(jsonSkype, traducidoABot);
-       });
+        it('Traducir de Skype a lenguaje generico:', function(){
+            assert.deepEqual(jsonSkype, traducidoABot);
+        });
 
     });
 });
