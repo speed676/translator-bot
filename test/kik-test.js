@@ -3,7 +3,7 @@ let kik = require("../lib/KikBot");
 let validador = require("../lib/TJSONValidator");
 
 describe('TEST', function() {
-  	describe('All platforms', function() {
+  	describe('KikBot test', function() {
 
       let jsonKik = {
         "chatId": "001",
@@ -28,37 +28,38 @@ describe('TEST', function() {
           "idReceptor": "001", 
           "idCanal": "001", 
           "mensaje": { 
-            "text": "hola mundo", 
-            "type": "text"
+              "texto": "hola mundo", 
+              "tipo": "text"
           },
-          "buttons": [{
-            "title": "boton1"
+          "botones": [{
+              "titulo": "boton1"
           },
           {
-            "title": "boton2"
+              "titulo": "boton2"
           }]
-        };
+      };
 
-      // let traducidoABot = kik.translateToSystem(jsonGenerico);
 
-      // let traducidoASystem = kik.translateToBot(jsonKik);
+      let traducidoKikGenerico = kik.translateToSystem(jsonKik);
+
+      let traducidoGenericoKik = kik.translateToBot(jsonGenerico);
 
       it('validar objeto JSONKIK:', function(){
-
         assert.equal(true, validador.validate(jsonKik).success);
       });
+
       it('validar objeto jsonGenerico:', function(){
         assert.equal(true, validador.validate(jsonGenerico).success);
-        
       });
 
-      // it('Traducir a lenguage de KIK:', function(){
-      //   assert.deepEqual(jsonKik, traducidoABot);
-      // });
+      it('Traducir de Kik a generico:', function(){
+         assert.deepEqual(jsonGenerico, traducidoKikGenerico);
+       });
 
-      // it('Traducir de KIK a lenguaje generico:', function(){
-      //   assert.deepEqual(jsonKik, traducidoABot);
-      // });
+      it('Traducir de generico a Kik:', function(){
+        assert.deepEqual(jsonKik, traducidoGenericoKik);
+      });
 
     });
+
 });
