@@ -1,7 +1,7 @@
 {
   "name": "traductor_bot",
   "description": "Bot message translator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Victor Guillem Agustí <guillem@uji.es>",
   "maintainers": [
     "Victor Guillem Agustí <guillem@uji.es>"
