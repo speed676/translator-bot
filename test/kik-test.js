@@ -1,5 +1,5 @@
 let assert = require('assert');
-let kik = require("../lib/KikBot");
+let KikBotTranslator = require("../lib/KikBot");
 let validador = require("../lib/TJSONValidator");
 
 describe('TEST', function() {
@@ -27,7 +27,7 @@ describe('TEST', function() {
       let jsonGenerico = { 
           "idReceptor": "001", 
           "idCanal": "001", 
-          "mensaje": { 
+          "contenido": { 
               "texto": "hola mundo", 
               "tipo": "text"
           },
@@ -39,10 +39,9 @@ describe('TEST', function() {
           }]
       };
 
+      let traducidoKikGenerico = KikBotTranslator.translateToSystem(jsonKik);
 
-      let traducidoKikGenerico = kik.translateToSystem(jsonKik);
-
-      let traducidoGenericoKik = kik.translateToBot(jsonGenerico);
+      let traducidoGenericoKik = KikBotTranslator.translateToBot(jsonGenerico);
 
       it('validar objeto JSONKIK:', function(){
         assert.equal(true, validador.validate(jsonKik).success);

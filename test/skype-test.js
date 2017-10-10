@@ -1,5 +1,5 @@
 let assert = require('assert');
-let skype = require("../lib/SkypeBot");
+let SkypeBotTranslator = require("../lib/SkypeBot");
 
 describe('TEST', function() {
     describe('Skype plattform', function() {
@@ -28,15 +28,15 @@ describe('TEST', function() {
         let jsonGenerico = { 
             "idReceptor": "001", 
             "idCanal": "001", 
-            "mensaje": { 
+            "contenido": { 
               "texto": "hola mundo", 
               "tipo": "text"
             }
         };
 
-        let traducidoASystem = skype.translateToSystem(jsonSkype);
+        let traducidoASystem = SkypeBotTranslator.translateToSystem(jsonSkype);
 
-        let traducidoABot = skype.translateToBot(jsonGenerico);
+        let traducidoABot = SkypeBotTranslator.translateToBot(jsonGenerico);
 
         it('Traducir a lenguage de Skype:', function(){
             assert.deepEqual(jsonGenerico, traducidoASystem);
