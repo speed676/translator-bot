@@ -1,18 +1,18 @@
 {
   "name": "traductor_bot",
-  "description": "Node.js Parameter Replacer",
-  "version": "0.1.0",
+  "description": "Bot message translator",
+  "version": "1.0.0",
   "author": "Victor Guillem Agustí <guillem@uji.es>",
   "maintainers": [
     "Victor Guillem Agustí <guillem@uji.es>"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sergiolepore/param_replacer.git"
+    "url": "git+https://github.com/speed676/translator-bot.git"
   },
   "keywords": [
-    "parmeters",
-    "replacer"
+    "bot",
+    "message"
   ],
   "main": "./lib/app.js",
   "license": "BSD-3-Clause",
@@ -20,9 +20,9 @@
     "node": ">= 6.0"
   },
   "bugs": {
-    "url": "https://github.com/sergiolepore/param_replacer/issues"
+    "url": "https://github.com/speed676/translator-bot/issues"
   },
-  "homepage": "https://github.com/sergiolepore/param_replacer#readme",
+  "homepage": "https://github.com/speed676/translator-bot#readme",
   "directories": {
     "test": "test"
   },
